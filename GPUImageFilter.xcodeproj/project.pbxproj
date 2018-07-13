@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		0CE1C26A38F0FEED720B2BFC /* Pods_GPUImageFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C8877CC04A2AD920CB87B8 /* Pods_GPUImageFilter.framework */; };
 		140EA88420F494D3003230C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EA88320F494D3003230C0 /* AppDelegate.swift */; };
-		140EA88620F494D3003230C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EA88520F494D3003230C0 /* ViewController.swift */; };
+		140EA88620F494D3003230C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EA88520F494D3003230C0 /* MainViewController.swift */; };
 		140EA88920F494D3003230C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140EA88720F494D3003230C0 /* Main.storyboard */; };
 		140EA88B20F494D5003230C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140EA88A20F494D5003230C0 /* Assets.xcassets */; };
 		140EA88E20F494D5003230C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140EA88C20F494D5003230C0 /* LaunchScreen.storyboard */; };
 		140EA89920F494D5003230C0 /* GPUImageFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EA89820F494D5003230C0 /* GPUImageFilterTests.swift */; };
 		140EA8A420F494D5003230C0 /* GPUImageFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140EA8A320F494D5003230C0 /* GPUImageFilterUITests.swift */; };
+		1432CCFC20F73B3D0063A39A /* FilterDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CCFB20F73B3D0063A39A /* FilterDisplayViewController.swift */; };
+		1432CCFF20F73B680063A39A /* FilterOperationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CCFD20F73B680063A39A /* FilterOperationTypes.swift */; };
+		1432CD0020F73B680063A39A /* FilterOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CCFE20F73B680063A39A /* FilterOperations.swift */; };
+		1432CD0320F73BB90063A39A /* FilterMe_Part2_ProcessedLUT.png in Resources */ = {isa = PBXBuildFile; fileRef = 1432CD0220F73BB90063A39A /* FilterMe_Part2_ProcessedLUT.png */; };
+		1432CD0B20F73D0B0063A39A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432CD0A20F73D0B0063A39A /* Toast.swift */; };
+		1432CD1020F73FB20063A39A /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 140EA8C120F4A049003230C0 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1432CD1520F742E20063A39A /* FilterDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1432CD1420F742E20063A39A /* FilterDisplayViewController.xib */; };
+		1432CD1820F744700063A39A /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1432CD1720F744700063A39A /* lookup_miss_etikate.png */; };
 		3662FC7D50FB1BDC1C79F89A /* Pods_GPUImageFilterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F814244B088C3F182EE15C25 /* Pods_GPUImageFilterUITests.framework */; };
 		85A98F38CA1932D8A74B757B /* Pods_GPUImageFilterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEAFCC3E9CF2CF2751DBFBB /* Pods_GPUImageFilterTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,13 +77,34 @@
 			remoteGlobalIDString = BC9E34E81E524A2200B8604F;
 			remoteInfo = GPUImage_iOS;
 		};
+		1432CD1120F73FB20063A39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 140EA8B520F4A049003230C0 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9E34E81E524A2200B8604F;
+			remoteInfo = GPUImage_iOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1432CD1320F73FB30063A39A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1432CD1020F73FB20063A39A /* GPUImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D36F985DA0741CDFF9CCFB5 /* Pods-GPUImageFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImageFilter.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImageFilter/Pods-GPUImageFilter.release.xcconfig"; sourceTree = "<group>"; };
 		140EA88020F494D3003230C0 /* GPUImageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUImageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140EA88320F494D3003230C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		140EA88520F494D3003230C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		140EA88520F494D3003230C0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		140EA88820F494D3003230C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		140EA88A20F494D5003230C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140EA88D20F494D5003230C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,6 +116,14 @@
 		140EA8A320F494D5003230C0 /* GPUImageFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUImageFilterUITests.swift; sourceTree = "<group>"; };
 		140EA8A520F494D5003230C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140EA8B520F4A049003230C0 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		1432CCFB20F73B3D0063A39A /* FilterDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDisplayViewController.swift; sourceTree = "<group>"; };
+		1432CCFD20F73B680063A39A /* FilterOperationTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOperationTypes.swift; sourceTree = "<group>"; };
+		1432CCFE20F73B680063A39A /* FilterOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOperations.swift; sourceTree = "<group>"; };
+		1432CD0220F73BB90063A39A /* FilterMe_Part2_ProcessedLUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FilterMe_Part2_ProcessedLUT.png; sourceTree = "<group>"; };
+		1432CD0A20F73D0B0063A39A /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		1432CD0C20F73D2A0063A39A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1432CD1420F742E20063A39A /* FilterDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDisplayViewController.xib; sourceTree = "<group>"; };
+		1432CD1720F744700063A39A /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
 		1AF5BD16C518CE4479713A7B /* Pods-GPUImageFilterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImageFilterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImageFilterTests/Pods-GPUImageFilterTests.release.xcconfig"; sourceTree = "<group>"; };
 		1FEAFCC3E9CF2CF2751DBFBB /* Pods_GPUImageFilterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPUImageFilterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C001151BC1EE771B204F41 /* Pods-GPUImageFilterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPUImageFilterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GPUImageFilterUITests/Pods-GPUImageFilterUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,8 +188,10 @@
 		140EA88220F494D3003230C0 /* GPUImageFilter */ = {
 			isa = PBXGroup;
 			children = (
+				1432CD0620F73D000063A39A /* Common */,
+				1432CD0120F73B700063A39A /* Filter */,
 				140EA88320F494D3003230C0 /* AppDelegate.swift */,
-				140EA88520F494D3003230C0 /* ViewController.swift */,
+				140EA88520F494D3003230C0 /* MainViewController.swift */,
 				140EA88720F494D3003230C0 /* Main.storyboard */,
 				140EA88A20F494D5003230C0 /* Assets.xcassets */,
 				140EA88C20F494D5003230C0 /* LaunchScreen.storyboard */,
@@ -198,6 +237,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1432CD0120F73B700063A39A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				1432CD0220F73BB90063A39A /* FilterMe_Part2_ProcessedLUT.png */,
+				1432CD1720F744700063A39A /* lookup_miss_etikate.png */,
+				1432CCFE20F73B680063A39A /* FilterOperations.swift */,
+				1432CCFD20F73B680063A39A /* FilterOperationTypes.swift */,
+				1432CCFB20F73B3D0063A39A /* FilterDisplayViewController.swift */,
+				1432CD1420F742E20063A39A /* FilterDisplayViewController.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		1432CD0620F73D000063A39A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1432CD0A20F73D0B0063A39A /* Toast.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		8333C3BD0B3507ED9F9CBF3D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +274,7 @@
 		B3E9CBAF9ADFB5DB7A554634 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1432CD0C20F73D2A0063A39A /* AVFoundation.framework */,
 				73C8877CC04A2AD920CB87B8 /* Pods_GPUImageFilter.framework */,
 				1FEAFCC3E9CF2CF2751DBFBB /* Pods_GPUImageFilterTests.framework */,
 				F814244B088C3F182EE15C25 /* Pods_GPUImageFilterUITests.framework */,
@@ -232,11 +293,14 @@
 				140EA87C20F494D3003230C0 /* Sources */,
 				140EA87D20F494D3003230C0 /* Frameworks */,
 				140EA87E20F494D3003230C0 /* Resources */,
+				DF1AD97D911F90E47DBCC4D7 /* [CP] Embed Pods Frameworks */,
+				1432CD1320F73FB30063A39A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				140EA8C520F4A0B6003230C0 /* PBXTargetDependency */,
+				1432CD1220F73FB20063A39A /* PBXTargetDependency */,
 			);
 			name = GPUImageFilter;
 			productName = GPUImageFilter;
@@ -368,7 +432,10 @@
 			files = (
 				140EA88E20F494D5003230C0 /* LaunchScreen.storyboard in Resources */,
 				140EA88B20F494D5003230C0 /* Assets.xcassets in Resources */,
+				1432CD0320F73BB90063A39A /* FilterMe_Part2_ProcessedLUT.png in Resources */,
 				140EA88920F494D3003230C0 /* Main.storyboard in Resources */,
+				1432CD1520F742E20063A39A /* FilterDisplayViewController.xib in Resources */,
+				1432CD1820F744700063A39A /* lookup_miss_etikate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +492,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DF1AD97D911F90E47DBCC4D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GPUImageFilter/Pods-GPUImageFilter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GPUImageFilter/Pods-GPUImageFilter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EC3779945EB77AB1D46F809A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,8 +539,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				140EA88620F494D3003230C0 /* ViewController.swift in Sources */,
+				140EA88620F494D3003230C0 /* MainViewController.swift in Sources */,
+				1432CD0B20F73D0B0063A39A /* Toast.swift in Sources */,
+				1432CCFF20F73B680063A39A /* FilterOperationTypes.swift in Sources */,
 				140EA88420F494D3003230C0 /* AppDelegate.swift in Sources */,
+				1432CCFC20F73B3D0063A39A /* FilterDisplayViewController.swift in Sources */,
+				1432CD0020F73B680063A39A /* FilterOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +581,11 @@
 			isa = PBXTargetDependency;
 			name = GPUImage_iOS;
 			targetProxy = 140EA8C420F4A0B6003230C0 /* PBXContainerItemProxy */;
+		};
+		1432CD1220F73FB20063A39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage_iOS;
+			targetProxy = 1432CD1120F73FB20063A39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -629,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8CD098782DAC1A884772E04B /* Pods-GPUImageFilter.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AL9L4NE9HL;
@@ -649,6 +748,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0D36F985DA0741CDFF9CCFB5 /* Pods-GPUImageFilter.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AL9L4NE9HL;

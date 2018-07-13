@@ -6,7 +6,10 @@ target 'GPUImageFilter' do
   use_frameworks!
 
   # Pods for GPUImageFilter
-
+  pod 'Toast', '~> 4.0.0'
+  pod 'RxCocoa'
+  pod 'RxSwift'
+  
   target 'GPUImageFilterTests' do
     inherit! :search_paths
     # Pods for testing
@@ -15,6 +18,14 @@ target 'GPUImageFilter' do
   target 'GPUImageFilterUITests' do
     inherit! :search_paths
     # Pods for testing
+  end
+  
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
+              config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+          end
+      end
   end
 
 end
